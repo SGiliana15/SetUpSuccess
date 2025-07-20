@@ -3,12 +3,15 @@
  */
 package org.example;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.ArrayList;
+import java.util.List;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println(DuplicateRemover.removeDuplicates(new ArrayList<>())); // []
+        System.out.println(DuplicateRemover.removeDuplicates(new ArrayList<>(List.of(1)))); // [1]
+        System.out.println(DuplicateRemover.removeDuplicates(new ArrayList<>(List.of(1, 2, 3)))); // [1, 2, 3]
+        System.out.println(DuplicateRemover.removeDuplicates(new ArrayList<>(List.of("A", "A", "B")))); // [A, B]
+        System.out.println(DuplicateRemover.removeDuplicates(new ArrayList<>(List.of(1, 1, 3, 3, 5, 5)))); // [1, 3, 5]
     }
 }
